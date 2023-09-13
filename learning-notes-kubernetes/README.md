@@ -34,10 +34,24 @@ The purpose of this article is to document what I learn about kubernetes. This i
     # get all kubernetes 'pods' kind of objects in the namespace named 'development'
     kubectl get pods -n development
     ```
-7. access the pod via busybox
-8. access the pod locally via tunnel
-9. delete eveything
-10. close minikube
+7. create a load balancer service
+    ```
+    kubectl apply -f service.yaml
+    ```
+8. check the service created
+    ```
+    kubectl get services -n development
+    ```
+9. expose the cluster to the outside world
+    ```
+    minikube tunnel
+    ```
+10. test your running app
+- open your browser
+- go to '127.0.0.1'
+- your app is running! yey
+11. delete everything
+12. stop minikube
 
 
 
