@@ -50,8 +50,17 @@ The purpose of this article is to document what I learn about kubernetes. This i
 - open your browser
 - go to '127.0.0.1'
 - your app is running! yey
-11. delete everything
-12. stop minikube
+11. delete the namespace, deployment, and service (optional)
+    ```
+    kubectl delete -f namespace.yaml
+    kubectl delete -f deployment.yaml
+    kubectl delete -f service.yaml
+    ```
+12. stop and delete the minikube instances (dont skip this part. minikube instance reserve device resource)
+    ```
+    minikube stop
+    minikube delete
+    ```
 
 
 
