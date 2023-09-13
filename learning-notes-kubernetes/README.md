@@ -16,9 +16,24 @@ The purpose of this article is to document what I learn about kubernetes. This i
     kubectl apply -f namespace.yaml
     ```
 3. check the created namespace
+    ```
+    # get all kubernetes 'namespace' kind of objects in the cluster
+    kubectl get namespaces
+    ```
 4. create deployment
+    ```
+    kubectl apply -f deployment.yaml
+    ```
 5. check the deployment
+    ```
+    # get all kubernetes 'deployment' kind of objects in the namespace named 'development'
+    kubectl get deployments -n development
+    ```
 6. check the pod created
+    ```
+    # get all kubernetes 'pods' kind of objects in the namespace named 'development'
+    kubectl get pods -n development
+    ```
 7. access the pod via busybox
 8. access the pod locally via tunnel
 9. delete eveything
